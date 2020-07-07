@@ -1,8 +1,8 @@
 # README
 
-#DB設計
+# DB設計
 
-##users table
+## users table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -10,23 +10,23 @@
 |email|string|null: false|
 |password|string|null: false, unique: true|
 
-###association
+### association
 * has_many:groups,through:users_groups
 * has_many:messages
 
 
-##groups table
+## groups table
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false,index: true, unique: true|
 
-###association
+### association
 * has_many:users,through:users_groups
 * has_many:messages
 
 
-##messages table
+## messages table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -35,19 +35,19 @@
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null:false, foreign_key: true|
 
-###association
+### association
 * belongs_to: user
 * belongs_to: group
 
 
-##users_groups table
+## users_groups table
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###association
+### association
 * belongs_to: group
 * belongs_to: user
 
