@@ -11,6 +11,7 @@
 |password|string|null: false, unique: true|
 
 ### association
+* has_many:users_groups
 * has_many:groups,through:users_groups
 * has_many:messages
 
@@ -22,6 +23,7 @@
 |name|string|null: false,index: true, unique: true|
 
 ### association
+* has_many:users_groups
 * has_many:users,through:users_groups
 * has_many:messages
 
@@ -33,7 +35,7 @@
 |body|text|null: false, index: true|
 |image|string||
 |user_id|integer|null: false,foreign_key: true|
-|group_id|integer|null:false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### association
 * belongs_to: user
