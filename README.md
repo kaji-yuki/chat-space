@@ -32,7 +32,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false, index: true|
+|body|text|index: true|
 |image|string||
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
