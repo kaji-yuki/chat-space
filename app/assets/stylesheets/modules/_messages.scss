@@ -88,9 +88,22 @@
   margin-left: 5px;
 }
 
+.Edit-form{
+  display: flex;
+}
 
 .Edit-btn{
-  background-color: magenta;
+  display: block;
+  height: 40px;
+  width: 72px;
+  margin-top: 28px;
+  padding:0 20px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #38aef0;
+  border: 1px solid #38aef0;
+  text-decoration: none;
 }
 
 
