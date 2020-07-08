@@ -60,17 +60,46 @@
 
 .Chat{
   width: calc(100vw - 300px);
-  &__header{
+}
+.ChatHeader{
   height: 100px;
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+
+  &__groupName{
+    font-size: 20px;
+    color: #333333;
+    margin-top: 35px;
   }
-  &__message-table{
+}
+
+.memberList{
+  font-size: 12px;
+  color: #999999;
+  display: flex;
+  justify-content: start;
+  margin-top: 15px;
+}
+
+.memberName{
+  margin-left: 5px;
+}
+
+
+.Edit-btn{
+  background-color: magenta;
+}
+
+
+.ChatTable{
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
-  }
-  &__message-form{
+}
+
+.Footer{
   height: 90px;
   background-color: #d2d2d2;
   }
-}
