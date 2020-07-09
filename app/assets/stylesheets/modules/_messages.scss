@@ -110,7 +110,34 @@
 .ChatTable{
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
+  padding:35px 0 0 40px;
 }
+
+.Message{
+  margin-bottom: 46px;
+}
+
+.MessageInfo{
+  display: flex;
+  margin-bottom: 12px;
+  &__name{
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+  }
+  &__date{
+    font-size: 12px;
+    color: #999999;
+    text-align: start;
+    padding-left: 10px;
+  }
+}
+
+.MessageText{font-size: 14px;
+  color: #434A54;
+}
+
+
 
 .Footer{
   height: 90px;
