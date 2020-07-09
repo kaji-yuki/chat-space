@@ -30,3 +30,10 @@
       .MessageText
         ２番目のメッセージ
   .Footer
+    .FormBox
+      .Message-form
+        %input{type: :text,class: "Message-form__text",placeholder: "type a message"}
+        %label{class: "Message-form__label"}
+          =icon('far', 'image', class: "Message-form__image")
+          %input{type: :file,class: "Message-form__file"}
+      %input{type: :submit, value: "Send", name: "commit",class: "Send-btn"}

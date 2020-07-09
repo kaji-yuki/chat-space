@@ -137,9 +137,52 @@
   color: #434A54;
 }
 
-
-
+// ここから投稿フォーム
 .Footer{
   height: 90px;
   background-color: #d2d2d2;
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  align-items: center;
   }
+
+.FormBox{
+  height: 50px;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Message-form{
+  background-color: #fafafa;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  &__text{
+    width: 100%;
+    border: none;
+    padding: 0 40px 0 10px;
+  }
+  
+  &__image{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    font-size: 25px;
+  }
+  &__file{
+    display: none;
+  }
+}
+
+.Send-btn{
+  height: 50px;
+  background-color: #38aef0;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 30px;
+  margin-left: 15px;
+  border: none ;
+}
