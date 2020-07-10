@@ -1,39 +1,39 @@
-.Chat
-  .ChatHeader
-    .ChatHeader__group
-      .ChatHeader__groupName
+.MainTable
+  .MainHeader
+    .MainHeader__group
+      .MainHeader__groupName
         Test
-      %ul.memberList
+      %ul.MainHeader__memberList
         Member : 
-        %li.memberName
+        %li.MainHeader__member
           abe 
-        %li.memberName
+        %li.MainHeader__member
           tanaka
-    .Edit-form
-      =link_to "#", class:"Edit-btn" do
+    .MainHeader__Edit-form
+      =link_to "#", class:"MainHeader__Edit-btn" do
         Edit
   .ChatTable
     .Message
-      .MessageInfo
-        .MessageInfo__name
+      .Message__info
+        .Message__name
           YUKIKO
-        .MessageInfo__date
+        .Message__date
           2020/7/9 18:00
-      .MessageText
-        Test message
+      .Message__text
+        1st message
     .Message
-      .MessageInfo
-        .MessageInfo__name
-          yuki
-        .MessageInfo__date
-          2020/7/9 19:00
-      .MessageText
-        ２番目のメッセージ
+      .Message__info
+        .Message__name
+          kaori
+        .Message__date
+          2020/7/9 18:00
+      .Message__text
+        2nd message
   .Footer
     .FormBox
-      .Message-form
-        %input{type: :text,class: "Message-form__text",placeholder: "type a message"}
-        %label{class: "Message-form__label"}
-          =icon('far', 'image', class: "Message-form__image")
-          %input{type: :file,class: "Message-form__file"}
+      .MessageForm
+        %input{type: :text,class: "MessageForm__text",placeholder: "type a message"}
+        %label{class: "MessageForm__label"}
+          =icon('far', 'image', class: "MessageForm__image")
+          %input{type: :file,class: "MessageForm__file"}
       %input{type: :submit, value: "Send", name: "commit",class: "Send-btn"}

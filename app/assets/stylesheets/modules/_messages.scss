@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-.Side{
+.Sidebar{
   width:300px;
   color:#ffffff;
   font-weight: bold;
@@ -19,35 +19,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  &__list{
+}
+
+.User-table{
     height: 20px;
     width: 260px;
     display: flex;
     justify-content: space-between;
-  }
-  &__username{
+  &__name{
       font-size: 16px;
-      text-align: center;
   }
   &__icons{
-    width: 60px;
     display: flex;
-    justify-content: flex-end;
+  }
+  &__icon{
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 5px;
   }
 }
 
-.Contents__btn{
-  text-decoration: none;
-  color: #ffffff;
-  margin-left: 5px;
-}
 .GroupList{
   height: calc(100vh - 100px);
   background-color: #2f3e51;
+  padding:0 20px;
 }
 
 .Group{
-  padding: 20px 20px 40px 20px;
+  padding: 20px 0 40px 0;
   &__name{
     font-size: 15px;
     margin-bottom: 5px;
@@ -57,69 +56,61 @@
   }
 }
 
-
-.Chat{
+// ここからrignt-side
+.MainTable{
   width: calc(100vw - 300px);
 }
-.ChatHeader{
+
+.MainHeader{
   height: 100px;
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-
   &__groupName{
     font-size: 20px;
     color: #333333;
     margin-top: 35px;
   }
-}
-
-.memberList{
+  &__memberList{
   font-size: 12px;
   color: #999999;
   display: flex;
   justify-content: start;
   margin-top: 15px;
-}
-
-.memberName{
+  }
+  &__member{
   margin-left: 5px;
-}
-
-.Edit-form{
-  display: flex;
-}
-
-.Edit-btn{
+  }
+  &__Edit-form{
+    display: flex;
+    align-items: center;
+  }
+  &__Edit-btn{
   display: block;
   height: 40px;
   width: 72px;
-  margin-top: 28px;
   padding:0 20px;
   line-height: 40px;
   font-size: 16px;
-  text-align: center;
   color: #38aef0;
   border: 1px solid #38aef0;
   text-decoration: none;
+  }
 }
-
 
 .ChatTable{
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
   padding:35px 0 0 40px;
 }
-
 .Message{
   margin-bottom: 46px;
-}
-
-.MessageInfo{
+  &__info{
   display: flex;
   margin-bottom: 12px;
+  }
   &__name{
     font-size: 16px;
     color: #333333;
@@ -128,20 +119,19 @@
   &__date{
     font-size: 12px;
     color: #999999;
-    text-align: start;
     padding-left: 10px;
   }
-}
-
-.MessageText{font-size: 14px;
+  &__MessageText{
+  font-size: 14px;
   color: #434A54;
+  }
 }
 
 // ここから投稿フォーム
 .Footer{
   height: 90px;
   background-color: #d2d2d2;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   }
@@ -150,11 +140,9 @@
   height: 50px;
   width:100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.Message-form{
+.MessageForm{
   background-color: #fafafa;
   height: 50px;
   width: 100%;
@@ -163,13 +151,12 @@
   &__text{
     width: 100%;
     border: none;
-    padding: 0 40px 0 10px;
+    padding: 0 45px 0 10px;
   }
-  
   &__image{
     position: absolute;
-    right: 10px;
     top:10px;
+    right: 10px;
     font-size: 25px;
   }
   &__file{
@@ -181,7 +168,7 @@
   height: 50px;
   background-color: #38aef0;
   font-size: 16px;
-  color: #fff;
+  color: #ffffff;
   padding: 0 30px;
   margin-left: 15px;
   border: none ;
