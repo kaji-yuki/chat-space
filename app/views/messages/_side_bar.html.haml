@@ -2,11 +2,11 @@
   .Header
     .User-table
       .User-table__name
-        YUKIKO
+        = current_user.name
       .User-table__icons
         =link_to "#",class: "User-table__icon" do
           =icon('fas', 'edit')
-        =link_to "#", class: "User-table__icon" do
+        =link_to edit_user_path(current_user), class: "User-table__icon" do
           =icon('fas', 'cog')
   .GroupList
     .Group
