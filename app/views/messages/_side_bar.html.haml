@@ -4,7 +4,7 @@
       .User-table__name
         = current_user.name
       .User-table__icons
-        =link_to "#",class: "User-table__icon" do
+        =link_to new_group_path,class: "User-table__icon" do
           =icon('fas', 'edit')
         =link_to edit_user_path(current_user), class: "User-table__icon" do
           =icon('fas', 'cog')
