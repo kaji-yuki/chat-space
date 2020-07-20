@@ -4,23 +4,15 @@
       .User-table__name
         = current_user.name
       .User-table__icons
-        =link_to "#",class: "User-table__icon" do
+        =link_to new_group_path,class: "User-table__icon" do
           =icon('fas', 'edit')
         =link_to edit_user_path(current_user), class: "User-table__icon" do
           =icon('fas', 'cog')
   .GroupList
-    .Group
-      .Group__name
-        group1
-      .Group__message
-        No message
-    .Group
-      .Group__name
-        group2
-      .Group__message
-        New massage
-    .Group
-      .Group__name
-        group3
-      .Group__message
-        No message
+    - current_user.groups.each do |group|
+      .Group
+        = link_to '#' do
+          .Group__name
+            = group.name
+          .Group__message
+            No message
