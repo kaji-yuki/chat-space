@@ -9,7 +9,7 @@
           - @group.users.each do |user|
             = user.name
     .MainHeader__Edit-form
-      =link_to "#", class:"MainHeader__Edit-btn" do
+      =link_to edit_group_path(@group), class:"MainHeader__Edit-btn" do
         Edit
   .ChatTable
     = render @messages
