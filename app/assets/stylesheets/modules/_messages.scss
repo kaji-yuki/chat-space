@@ -47,13 +47,16 @@
 
 .Group{
   padding: 20px 0 40px 0;
-  text-decoration: none;
   &__name{
     font-size: 15px;
     margin-bottom: 5px;
+    text-decoration: none;
+    color: #ffffff;
   }
   &__message{
     font-size: 11px;
+    text-decoration: none;
+    color: #ffffff;
   }
 }
 

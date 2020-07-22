@@ -2,13 +2,12 @@
   .MainHeader
     .MainHeader__group
       .MainHeader__groupName
-        Test
+        = @group.name
       %ul.MainHeader__memberList
         Member : 
         %li.MainHeader__member
-          abe 
-        %li.MainHeader__member
-          tanaka
+          - @group.users.each do |user|
+            = user.name
     .MainHeader__Edit-form
       =link_to "#", class:"MainHeader__Edit-btn" do
         Edit
