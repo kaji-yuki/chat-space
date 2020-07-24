@@ -33,10 +33,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
+|body|string||
 |image|string||
-|user_id|integer|null: false,foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|integer|null: false,foreign_key: true|
+|group|integer|null: false, foreign_key: true|
+<!-- カリキュラムにてuser_id=>user,group_id=>groupになっていたので変更 -->
 
 ### association
 * belongs_to: user

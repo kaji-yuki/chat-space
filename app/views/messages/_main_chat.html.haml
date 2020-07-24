@@ -2,38 +2,23 @@
   .MainHeader
     .MainHeader__group
       .MainHeader__groupName
-        Test
+        = @group.name
       %ul.MainHeader__memberList
         Member : 
         %li.MainHeader__member
-          abe 
-        %li.MainHeader__member
-          tanaka
+          - @group.users.each do |user|
+            = user.name
     .MainHeader__Edit-form
-      =link_to "#", class:"MainHeader__Edit-btn" do
+      =link_to edit_group_path(@group), class:"MainHeader__Edit-btn" do
         Edit
   .ChatTable
-    .Message
-      .Message__info
-        .Message__name
-          YUKIKO
-        .Message__date
-          2020/7/9 18:00
-      .Message__text
-        1st message
-    .Message
-      .Message__info
-        .Message__name
-          kaori
-        .Message__date
-          2020/7/9 18:00
-      .Message__text
-        2nd message
+    = render @messages
   .Footer
     .FormBox
-      .MessageForm
-        %input{type: :text,class: "MessageForm__text",placeholder: "type a message"}
-        %label{class: "MessageForm__label"}
-          =icon('far', 'image', class: "MessageForm__image")
-          %input{type: :file,class: "MessageForm__file"}
-      %input{type: :submit, value: "Send", name: "commit",class: "Send-btn"}
+      =form_with model: [@group, @message], html: {class: "FormBox"}, local: true do |f|
+        .MessageForm
+          = f.text_field :body, class: "MessageForm__text", placeholder: "type a message"
+          = f.label :image, class: "MessageForm__label" do
+            = icon('far', 'image', class: "MessageForm__image")
+            = f.file_field :image, class: "MessageForm__file"
+        =f.submit 'Send', class: "Send-btn"
