@@ -55,8 +55,13 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      console.log(data)
+      $(".ChatTable").append(html);
+      $(".FormBox")[0].reset();
+      $(".ChatTable").animate({ scrollTop: $(".ChatTable")[0].scrollHeight});
+      $(".Send-btn").prop('disabled', false);
     })
-
+    .fail(function(){
+      alert('メッセージ送信に失敗しました');
+    })
   });
 });
