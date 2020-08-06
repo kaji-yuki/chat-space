@@ -14,11 +14,10 @@
   .ChatTable
     = render @messages
   .Footer
-    .FormBox
-      =form_with model: [@group, @message], html: {class: "FormBox"}, local: true do |f|
-        .MessageForm
-          = f.text_field :body, class: "MessageForm__text", placeholder: "type a message"
-          = f.label :image, class: "MessageForm__label" do
-            = icon('far', 'image', class: "MessageForm__image")
-            = f.file_field :image, class: "MessageForm__file"
-        =f.submit 'Send', class: "Send-btn"
+    =form_with model: [@group, @message], html: {class: "FormBox"}, local: true do |f|
+      .MessageForm
+        = f.text_field :body, class: "MessageForm__text", placeholder: "type a message"
+        = f.label :image, class: "MessageForm__label" do
+          = icon('far', 'image', class: "MessageForm__image")
+          = f.file_field :image, class: "MessageForm__file"
+      =f.submit 'Send', class: "Send-btn"
